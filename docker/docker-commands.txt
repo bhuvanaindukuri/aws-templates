@@ -1,0 +1,75 @@
+docker container run -d -p 8080:80 nginx
+docker image ls
+
+docker container ls
+
+Lists containers including exited ones
+docker container ls -a
+
+Start the container
+docker container start <container_id>
+ 
+Stop the container
+docker container stop <container_id>
+
+Remove the container
+docker container rm <container_id>
+
+Help on commands
+docker image rm --help
+
+Redis image
+docker run --name bhuvana-redis -d redis
+
+Mysql container
+docker run --name bhuvana-mysql -e MYSQL_ROOT_PASSWORD=adminPwd -d mysql:latest
+
+Interactive mode - Opens terminal of the container - Can make changes to the container
+docker container run -it ubuntu
+
+Create a new image from the container
+docker commit <container_id> <new-image-name>
+
+Tag the image created locally
+docker image tag ubuntu-bhuvana bhuvanap/bhuvana-repo
+docker image tag ubuntu-bhuvana bhuvanap/bhuvana-repo:1.0.0
+
+Push to the repo
+docker push bhuvanap/bhuvana-repo
+docker push bhuvanap/bhuvana-repo:1.0.0
+
+Create image from DockerFile in current directory
+docker image build -t bhuvana-java-project .
+
+Logs of the container 
+docker container logs <container_id>
+
+Stats of the container like CPU, memory etc
+docker container stats <container_id>
+
+Processes
+docker container top <container_id>
+
+Inspect configuration
+docker container inspect <container_id>
+
+--- Network ---
+
+docker network ls
+
+docker network stats bridge
+
+
+-- Volumes ---
+Create local volume
+docker volume create my-volume
+
+Map volume to container
+docker container run -v my-volume:/var/lib/my-volume mysql
+
+
+--Not working ---
+
+docker run -it --network bhuvana-network --rm mysql mysql -hbhuvana-mysql -uroot -padminPwd
+
+docker run -it --rm mysql mysql -hbhuvana-mysql -uroot -padminPwd
