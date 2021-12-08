@@ -1,2 +1,20 @@
+-- view namespaces
+kubectl get ns
+
 -- Create pod from yml
 kubectl create -f ./pod.yml
+
+-- View pods in the cluster
+kubectl get pod
+
+--View pods in a specific namespace
+kubectl get pod -n bhuvana-ns
+
+kubectl get pod -o wide
+
+kubectl describe pod bhuvana-pod1
+
+kubectl logs bhuvana-pod1
+
+-- Delete pod
+kubectl delete pod bhuvana-pod1
