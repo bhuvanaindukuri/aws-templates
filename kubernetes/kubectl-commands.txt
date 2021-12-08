@@ -1,0 +1,2 @@
+-- Create pod from yml
+kubectl create -f ./pod.yml
