@@ -11,6 +11,8 @@ kubectl get pod
 kubectl get pod -n bhuvana-ns
 
 kubectl get pod -o wide
+--Watch output
+kubectl get pod -w
 
 kubectl describe pod bhuvana-pod1
 
