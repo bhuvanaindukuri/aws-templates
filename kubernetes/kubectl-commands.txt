@@ -18,3 +18,11 @@ kubectl logs bhuvana-pod1
 
 -- Delete pod
 kubectl delete pod bhuvana-pod1
+
+--Get the URL of the service
+minikube service helloworld-service --url
+
+-- Get the values to be filled in the yml
+kubectl explain pod
+
+kubectl explain pod --recursive
