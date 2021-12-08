@@ -30,3 +30,21 @@ kubectl explain pod --recursive
 -- Change the number of replicas in replica set
 kubectl scale --replicas=15 rs/k8sdemo-rs-controller
 kubectl scale --replicas=15 rs/<ReplicaSet-name>
+
+--expose deployment as service
+kubectl expose deployment helloworld-deployment --type=NodePort
+
+Deploy a new version by changing the image
+kubectl set image deployment/helloworld-deployment k8s-demo=arjunachari12/k8s-demo:2
+kubectl set image deployment/<deployment-name> <container-name>=<image-name>:<image-version>
+
+-- Rollback deployment
+
+--Rollback to previous version
+kubectl rollout undo deployment/helloworld-deployment
+
+--Check history/revisions
+kubectl rollout history deployment/helloworld-deployment
+
+--Rollback to specific version
+kubectl rollout undo deployment/helloworld-deployment --to-revision=1
