@@ -26,3 +26,7 @@ minikube service helloworld-service --url
 kubectl explain pod
 
 kubectl explain pod --recursive
+
+-- Change the number of replicas in replica set
+kubectl scale --replicas=15 rs/k8sdemo-rs-controller
+kubectl scale --replicas=15 rs/<ReplicaSet-name>
