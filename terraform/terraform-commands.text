@@ -1,0 +1,9 @@
+--Initialize the workspace
+terraform init
+
+--Format the tf files
+terraform fmt
+
+
+--Validate the tf files
+terraform validate
