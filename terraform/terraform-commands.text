@@ -7,3 +7,9 @@ terraform fmt
 
 --Validate the tf files
 terraform validate
+
+--Execute the tf files
+terraform apply
+
+--Display the state
+terraform show
