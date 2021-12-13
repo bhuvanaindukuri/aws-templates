@@ -13,3 +13,6 @@ terraform apply
 
 --Display the state
 terraform show
+
+--Delete all the provisioned resources
+terraform destroy
