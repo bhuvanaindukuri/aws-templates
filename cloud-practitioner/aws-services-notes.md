@@ -20,7 +20,16 @@
 - AWS Web Application Firewall (WAF)
   - AWS service enables you to protect your web application by using a rule-based system to detect traffic and actions that should be blocked
 - AWS Shield
-- 
+- AWS Professional Services
+  - If you wanted to engage AWS resources for a paid engagement to assist in a cloud migration, which team would you leverage  
+- AWS Marketplace
+- AWS Service Gateway
+- AWS Partner Network Consulting Partners
+    - Not AWS resources  
+- AWS Snowball
+    - Helps in data migration to the cloud
+
+
 
 ### Monitoring Services
 - AWS Personal Health Dashboard
@@ -34,6 +43,8 @@
     - Fully managed AWS service uses machine learning to both detect and protect your data that is stored in AWS
 - AWS CloudTrail
     - AWS service enables auditing of your AWS account by logging actions taken on your AWS resources
+- AWS Config
+    -   AWS service provides the ability to assess and audit configuration of the AWS resources you have deployed in your account
 
 ### Storage Services
 - AWS Storage Gateway
