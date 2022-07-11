@@ -1,6 +1,5 @@
 ### To study
 ---
-- Well-architected framework -https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/index.en.html
 - Shared responsibility model
 - Disaster recovery approaches
 - Cost estimation & pricing tools
