@@ -28,8 +28,15 @@ AWS Wavelength embeds AWS compute and storage services within 5G networks, provi
 AWS Outposts is a family of fully managed solutions delivering AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience
 
 ### Well-architected framework
+
+- <b>AWS Well-Architected(WA)</b> service provides a consistent approach for customers and partners to evaluate architectures and implement scalable designs.
+- <b>AWS Well-Architected Lenses</b> extend the guidance offered by AWS Well-Architected to specific industry and technology domains, such as machine learning (ML), data analytics, serverless, high performance computing (HPC), IoT, SAP, streaming media, the games industry, hybrid networking, and financial services
+
+#### References
+
 - https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/index.en.html
 - https://aws.amazon.com/architecture/well-architected/?ref=wellarchitected-ws&wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc
+
     
  ### Pillars
  - Operational Excellence Pillar 
