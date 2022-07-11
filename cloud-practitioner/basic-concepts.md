@@ -26,3 +26,15 @@ AWS Wavelength embeds AWS compute and storage services within 5G networks, provi
 
 <b>AWS Outposts:</b>\
 AWS Outposts is a family of fully managed solutions delivering AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience
+
+### Well-architected framework
+- https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/index.en.html
+- https://aws.amazon.com/architecture/well-architected/?ref=wellarchitected-ws&wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc
+    
+ ### Pillars
+ - Operational Excellence Pillar 
+ - Security Pillar
+ - Reliability Pillar
+ - Performance Efficiency Pillar
+ - Cost Optimization Pillar
+ - Sustainability Pillar  
