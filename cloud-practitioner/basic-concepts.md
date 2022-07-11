@@ -27,6 +27,9 @@ AWS Wavelength embeds AWS compute and storage services within 5G networks, provi
 <b>AWS Outposts:</b>\
 AWS Outposts is a family of fully managed solutions delivering AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience
 
+<b>AWS GovCloud (US)</b>
+AWS GovCloud (US) consist of isolated AWS Regions designed to allow U.S. government agencies and customers move sensitive workloads into the cloud by addressing their specific regulatory and compliance requirements
+
 ### Well-architected framework
 
 - <b>AWS Well-Architected(WA)</b> service provides a consistent approach for customers and partners to evaluate architectures and implement scalable designs.
