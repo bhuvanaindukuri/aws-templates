@@ -22,3 +22,35 @@ Creation of user involves
 
 <b>AWS Congnito</b>
   - End user access
+  - 2 types
+    - User pool
+    - Identity  Pool - Provide temporary AWS credentials
+
+<b>AWS Organizations</b>
+   - Automate account creation and management
+   - Create groups of accounts based on business needs
+   - Govern access to AWS services resources region by policies
+   - Setup single payment method for all AWS accounts with consolidated billing
+   - Share resources across accounts
+
+<b>AWS SSO</b>
+  - Can be used for single-signon for users across applications in AWS and On-prem
+
+<b>AWS Cloud directory/AWS Directory service</b>
+ - Can integrate with an existing MS active directory
+ - AD Connector can establish a trusted relationship between your corporate Active Directory and AWS
+
+###IAM
+
+#### Group
+  - Combination of policies
+  - Can be assigned to a user
+
+#### User
+3 ways to assign permissions to users
+1. Add user to group
+2. Copy permissions from another user
+3. Attach existing policies directly
+
+#### Policy
+  - User can create a policy to group required permissions
