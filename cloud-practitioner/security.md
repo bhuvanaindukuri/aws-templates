@@ -18,6 +18,40 @@ Creation of user involves
   
 ### Services
 
+<b>Amazon Virtual Private Cloud(VPC)</b>
+   - Isolate from internet
+   - Can connect to other private networks using IPSec tunnels and AWS Direct connect
+---- Network ------
+AWS Virtual Private Cloud(VPC)
+  - Can choose IP range
+  - Further grouped into subnets
+  - To allow external traffic a gateway can be used
+  - To allow only specific traffic a Virtual private gateway can be used
+
+Subnet
+  - Grouping within the VPC
+  - Created for providing access to the gateway
+  - Each subnet has a Network Acess Control List(ACL) to check the allowed 
+  - Network ACL checks control at the entrance and exit
+  - Network ACL is stateless
+  - Network ACL allows all inbound and outbound traffic by default
+ 
+Security Group
+ - Controls access at resource level within the subnet
+ - Check only entrance and not exit
+ - Stateful
+ - Doesnt allow any traffic by default
+ - Acts as a Firewaal
+ 
+Stateless | Stateful
+  
+AWS Direct Connect
+  - Dedicated direct connection between datacenter and VPC
+  - Low latency and high throughput and security  
+  - Doesnt travel over the public internet
+
+
+
 <b>AWS IAM</b>
 
 <b>AWS Congnito</b>
