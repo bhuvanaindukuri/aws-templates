@@ -7,10 +7,34 @@
 - Support plans
 -
 
+### Types fo EC2 instances - Based on resources
+- General purpose instances
+- Compute optimized
+- Memory optimized
+- Accelerated computing
+- Storage optimized instances
+
 ### Types fo EC2 instances
+- On-Demand
+- Reserved instances
+- Spot Instances
+- EC2 Savings plan
 - Dedicated host
-  - Apt for licensed tools   
+  - Apt for licensed tools
+
+#### Scaling EC2 instances
+- Dynamic scaling
+- Predictive scaling
   
+### Messaging & Queuing
+- Amazon SQS
+  - Queing mechanism
+  - Auto scaling  
+- SNS
+  - Publish/Subscribe model
+  - Can be used for end users also
+  - Subscribers can be SQS queues, AWS Lambda functions, and HTTPS or HTTP web hooks
+
   
 ### Services
 - AWS Trusted Advisor
