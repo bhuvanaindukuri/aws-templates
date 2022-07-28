@@ -27,6 +27,13 @@ AWS Virtual Private Cloud(VPC)
   - Further grouped into subnets
   - To allow external traffic a gateway can be used
   - To allow only specific traffic a Virtual private gateway can be used
+  - Private link can be used to connect multiple VPCs and avoid traffic in the internet
+  - 2 types of VPC endpoints available
+    1. Gateway endpoint
+    2. Interface endpoint
+  - Each VPC has a router/route table
+    - A route table contains a set of rules, called routes, that are used to determine where network traffic is directed.
+    - Each subnet in your VPC must be associated with a route table; the table controls the routing for the subnet. A subnet can only be associated with one route table at a time, but you can associate multiple subnets with the same route table.  
 
 Subnet
   - Grouping within the VPC
@@ -88,3 +95,43 @@ AWS Direct Connect
 
 #### Policy
   - User can create a policy to group required permissions
+
+### Audit
+---
+
+#### CloudTrail
+- Used to monitor the usage of services, security configuration etc
+- Can setup rules to monitor and alert
+- Can be triggered on change or scheduled
+
+#### Inspector  
+ - automated security assessment service
+ - Assesses applications for exposure, vulnerabilities and deviations from best practices
+ - Have 3 components
+   - Network configuration reachability piece
+   - Agent
+   - Security assessment service
+
+#### AWS Config
+ - Monitors resource configuration against desired state
+
+#### Trusted Advisor
+ - Assists you in provisioning your AWS resources using best practices
+ - Produces reports under 5 categories
+
+#### Guard Duty
+ - Threat detection tool
+ - Uses ML
+ - Categorizes to 3 levels
+    - Low
+    - Medium
+    - High
+ -  
+#### Security Hub
+ - Amazon GuardDuty
+ - Amazon Inspector
+ - Amazon Macie
+ - Amazon partner solutions
+
+#### To learn
+- NAT Gateway
