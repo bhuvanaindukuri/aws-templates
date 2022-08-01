@@ -16,6 +16,7 @@
 - Accelerated computing
 - Storage optimized instances
 
+
 ### Types fo EC2 instances
 - On-Demand
 - Reserved instances
@@ -34,6 +35,10 @@
   - Docker based container management service   
 - EKS
   - Kubernetes based container management service 
+
+- AWS Elastic Beanstalk
+  - Helps in provisioning EC2 based environments
+
 
 Both of them can either run on EC2 or Fargate
 
@@ -66,6 +71,7 @@ Both of them can either run on EC2 or Fargate
     - Not AWS resources  
 - AWS Snowball
     - Helps in data migration to the cloud
+
 
 
 
