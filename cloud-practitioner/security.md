@@ -25,8 +25,8 @@ Creation of user involves
 AWS Virtual Private Cloud(VPC)
   - Can choose IP range
   - Further grouped into subnets
-  - To allow external traffic a gateway can be used
-  - To allow only specific traffic a Virtual private gateway can be used
+  - To allow external traffic an internet gateway need to be used ()
+  - To allow traffic from approved network, virtual private gateway need to be used ( Similar to a VPN)
   - Private link can be used to connect multiple VPCs and avoid traffic in the internet
   - 2 types of VPC endpoints available
     1. Gateway endpoint
@@ -43,6 +43,10 @@ Subnet
   - Network ACL is stateless
   - Network ACL allows all inbound and outbound traffic by default
  
+### VPC Features
+1. Network hardening
+
+
 Security Group
  - Controls access at resource level within the subnet
  - Check only entrance and not exit
@@ -56,6 +60,7 @@ AWS Direct Connect
   - Dedicated direct connection between datacenter and VPC
   - Low latency and high throughput and security  
   - Doesnt travel over the public internet
+  - setup by a local partner
 
 
 
