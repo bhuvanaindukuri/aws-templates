@@ -4,3 +4,12 @@
 - AMI
 - Auto-Scaling group
 - IAM Role
+
+### Route 53
+
+- DNS mapping
+- Routing policy
+  - Latency-based
+  - Geolocation
+  - Geoproximity
+  - weighted round robin
