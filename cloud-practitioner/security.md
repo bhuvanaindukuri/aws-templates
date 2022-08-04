@@ -9,6 +9,11 @@
 
 Least privilege access
 - MFA should be enabled for root user
+- MFA options
+  - Google authenticator
+  - Authy
+  - Yubikey
+  - Hardware key fob MFA device
 
 Creation of user involves
 - Specify what the user needs to access like programatic access or console
@@ -62,9 +67,28 @@ AWS Direct Connect
   - Doesnt travel over the public internet
   - setup by a local partner
 
-
-
 <b>AWS IAM</b>
+- Global service
+- Group can have multiple users but not other groups
+- Policies defined in JSON and contains permissions
+- Policy file structure
+  - Statement
+    - Id
+    - Effect - Allow/Deny
+    - Principal - User
+    - Action - Scopes of the APIs or permissions
+    - Resource - Resource details
+- Usage
+   - User - User id/password
+   - CLI/SDK - Access key/secret
+   - Automate - IAM roles (May be from another service)
+- Security tools
+  - Credentials report (Account level)
+  - Access advisor (user level) - Helps with least privilege
+
+
+
+### Others
 
 <b>AWS Congnito</b>
   - End user access
