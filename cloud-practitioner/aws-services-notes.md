@@ -7,28 +7,10 @@
 - Support plans
 -
 
-### Types fo EC2 instances - Based on resources
-- General purpose instances
-- Compute optimized
-  - Good for batch processing 
-- Memory optimized
-  - Good for high performance databases
-- Accelerated computing
-- Storage optimized instances
-
-
-### Types fo EC2 instances
-- On-Demand
-- Reserved instances
-  - Reserved for 1 or 3 years
-- Spot Instances
-- EC2 Savings plan
-- Dedicated host
-  - Apt for licensed tools
-
-#### Scaling EC2 instances
-- Dynamic scaling
-- Predictive scaling
+### Cloudshell
+- Shell available from the console
+- Available only in certain regions
+- Files can be created and are stored
 
 ### Compute Services
 - ECS 

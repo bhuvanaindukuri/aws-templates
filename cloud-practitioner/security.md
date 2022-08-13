@@ -9,6 +9,11 @@
 
 Least privilege access
 - MFA should be enabled for root user
+- MFA options
+  - Google authenticator
+  - Authy
+  - Yubikey
+  - Hardware key fob MFA device
 
 Creation of user involves
 - Specify what the user needs to access like programatic access or console
@@ -25,8 +30,8 @@ Creation of user involves
 AWS Virtual Private Cloud(VPC)
   - Can choose IP range
   - Further grouped into subnets
-  - To allow external traffic a gateway can be used
-  - To allow only specific traffic a Virtual private gateway can be used
+  - To allow external traffic an internet gateway need to be used ()
+  - To allow traffic from approved network, virtual private gateway need to be used ( Similar to a VPN)
   - Private link can be used to connect multiple VPCs and avoid traffic in the internet
   - 2 types of VPC endpoints available
     1. Gateway endpoint
@@ -43,23 +48,51 @@ Subnet
   - Network ACL is stateless
   - Network ACL allows all inbound and outbound traffic by default
  
+### VPC Features
+1. Network hardening
+
+
 Security Group
  - Controls access at resource level within the subnet
  - Check only entrance and not exit
  - Stateful
  - Doesnt allow any traffic by default
  - Acts as a Firewaal
- 
+ - Can sutorize IPs or other security groups
+
+ Note: 3389 - Port for RDP(Remote Desktop Protocol)
+
+
 Stateless | Stateful
   
 AWS Direct Connect
   - Dedicated direct connection between datacenter and VPC
   - Low latency and high throughput and security  
   - Doesnt travel over the public internet
-
-
+  - setup by a local partner
 
 <b>AWS IAM</b>
+- Global service
+- Group can have multiple users but not other groups
+- Policies defined in JSON and contains permissions
+- Policy file structure
+  - Statement
+    - Id
+    - Effect - Allow/Deny
+    - Principal - User
+    - Action - Scopes of the APIs or permissions
+    - Resource - Resource details
+- Usage
+   - User - User id/password
+   - CLI/SDK - Access key/secret
+   - Automate - IAM roles (May be from another service)
+- Security tools
+  - Credentials report (Account level)
+  - Access advisor (user level) - Helps with least privilege
+
+
+
+### Others
 
 <b>AWS Congnito</b>
   - End user access
