@@ -12,12 +12,15 @@
 - Available only in certain regions
 - Files can be created and are stored
 
-
 ### Compute Services
 - ECS 
   - Docker based container management service   
 - EKS
   - Kubernetes based container management service 
+
+- AWS Elastic Beanstalk
+  - Helps in provisioning EC2 based environments
+
 
 Both of them can either run on EC2 or Fargate
 
@@ -50,6 +53,7 @@ Both of them can either run on EC2 or Fargate
     - Not AWS resources  
 - AWS Snowball
     - Helps in data migration to the cloud
+
 
 
 
