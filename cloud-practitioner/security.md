@@ -58,7 +58,11 @@ Security Group
  - Stateful
  - Doesnt allow any traffic by default
  - Acts as a Firewaal
- 
+ - Can sutorize IPs or other security groups
+
+ Note: 3389 - Port for RDP(Remote Desktop Protocol)
+
+
 Stateless | Stateful
   
 AWS Direct Connect
