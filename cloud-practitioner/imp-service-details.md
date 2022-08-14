@@ -54,3 +54,13 @@
   - Geoproximity
   - weighted round robin
 
+#Elastic Load Balancer(ELB)
+- SSL termination
+- Health check to instances
+- Single point of access
+- Seemlessly handle failure of downstream instances
+- High availability across zones
+- 3 kinds of load balancers
+  - Application load balancers (HTTP/HTTPS) L7
+  - Network load balancer (TCP) L4
+  - Classic load balancer L4 & L7
