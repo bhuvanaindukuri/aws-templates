@@ -51,5 +51,11 @@ Each type has different classes
 
 #### Auto scaling Group (ASG)
 - Min, Max and Desired
-
+- Scaling strategies
+  - Manual scaling
+  - Dynamic scaling
+    1. Simple/Step scaling
+    2. Target tracking (Ex: Avg CPU 40%)
+    3. Scheduled scaling
+  - Predictive scaling - Use ML
 
