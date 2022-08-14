@@ -54,7 +54,7 @@
   - Geoproximity
   - weighted round robin
 
-#Elastic Load Balancer(ELB)
+### Elastic Load Balancer(ELB)
 - SSL termination
 - Health check to instances
 - Single point of access
