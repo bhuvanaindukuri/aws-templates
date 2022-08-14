@@ -49,6 +49,7 @@ Each type has different classes
 - High performant
 - Data loss on termination
 
-
+#### Auto scaling Group (ASG)
+- Min, Max and Desired
 
 
