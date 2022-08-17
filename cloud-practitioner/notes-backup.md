@@ -82,9 +82,6 @@ AWS Direct Connect
 - Low latency and high throughput and security
 - Doesnt travel over the public internet
 
-Route 53
-- DNS service
-
 ECS vs EKS
 
 Factors for choosing region:
