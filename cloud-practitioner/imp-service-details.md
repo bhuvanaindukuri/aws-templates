@@ -35,24 +35,48 @@
 ### Route 53
 - DNS Mapping
 - Routing policies
- - Latency based
- - Geolocation
- - Geoproximity
- - Weighted round robin
+  - Simple (No Health checks)
+  - Latency based
+    - Geoproximity
+  - Geolocation
+  - Weighted round robin
+  - Failover routing policy (DR)
+
+### CloudFront
+- Cache data in Edge location to speed reads
+- DDos Protection
+- Can cache from S3 buckets or HTTP server
+
+## Integration services
+
+### Simple Queue Service (SQS)
+- One producer multiple consumers
+- Consumers share messages
+- Helps in decoupling services
+- Uses proprietary protocol
+- Messages can be retained upto 14 days
+- 2 types
+  - Standard
+  - FIFO
+
+### Simple Notification Service (SNS)
+- One message to many receivers/services
+- Targets can be SQS, Kinesis, Lambda etc
+- Can be email or HTTP 
+
+### Amazon Kinesis
+- real-time big data streaming
+
+### Amazon MQ
+- 
+
 
 - Sessions manager can be used to trace the activities done in a session ( User connection to EC2 instance)
 - AMI
 - Auto-Scaling group
 - IAM Role
 
-### Route 53
 
-- DNS mapping
-- Routing policy
-  - Latency-based
-  - Geolocation
-  - Geoproximity
-  - weighted round robin
 
 ### Elastic Load Balancer(ELB)
 - SSL termination
