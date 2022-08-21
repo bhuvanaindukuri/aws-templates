@@ -28,31 +28,55 @@ Creation of user involves
    - Can connect to other private networks using IPSec tunnels and AWS Direct connect
 ---- Network ------
 AWS Virtual Private Cloud(VPC)
-  - Can choose IP range
-  - Further grouped into subnets
-  - To allow external traffic an internet gateway need to be used ()
-  - To allow traffic from approved network, virtual private gateway need to be used ( Similar to a VPN)
-  - Private link can be used to connect multiple VPCs and avoid traffic in the internet
-  - 2 types of VPC endpoints available
-    1. Gateway endpoint
-    2. Interface endpoint
-  - Each VPC has a router/route table
-    - A route table contains a set of rules, called routes, that are used to determine where network traffic is directed.
-    - Each subnet in your VPC must be associated with a route table; the table controls the routing for the subnet. A subnet can only be associated with one route table at a time, but you can associate multiple subnets with the same route table.  
+   - Can choose IP range
+   - Further grouped into subnets
+   - Region level
+   - To allow external traffic an internet gateway need to be used ()
+   - To allow traffic from approved network, virtual private gateway need to be used ( Similar to a VPN)
+   - Private link can be used to connect multiple VPCs and avoid traffic in the internet
+   - 2 types of VPC endpoints available
+     1. Gateway endpoint
+     2. Interface endpoint
+   - Each VPC has a router/route table
+     - A route table contains a set of rules, called routes, that are used to determine where network traffic is directed.
+     - Each subnet in your VPC must be associated with a route table; the table controls the routing for the subnet. A subnet can only be associated with one route table at a time, but you can associate multiple subnets with the same route table.  
 
 Subnet
   - Grouping within the VPC
   - Created for providing access to the gateway
+  - AZ level
   - Each subnet has a Network Acess Control List(ACL) to check the allowed 
   - Network ACL checks control at the entrance and exit
   - Network ACL is stateless
   - Network ACL allows all inbound and outbound traffic by default
- 
+
+#### NAT Gateway 
+- Helps private subnet access resources in internet
+- Attached to subnet
+
+#### Internet Gateway
+- Helps in exposing a subnet to the internet
+- Attached to VPC
+
 ### VPC Features
 1. Network hardening
 
+#### VPC Flow logs
+- Capture information about IP traffic going into interfaces
+- Can be loaded to S3 or CloudWatch logs
 
-Security Group
+#### VPC Peering
+- Connect 2 VPCs privately
+- Not transitive
+- Must not have overlapping CIDR IP range
+- Can be across regions also
+
+#### VPC Endpoints
+- Allow to connect to AWS services using a private network
+- VPC Endpoint Gateway allows only S3 & DynamoDB
+- VPC Endpoint Interface allows to access the rest of the services
+
+### Security Group
  - Controls access at resource level within the subnet
  - Check only entrance and not exit
  - Stateful
@@ -64,12 +88,34 @@ Security Group
 
 
 Stateless | Stateful
+
+#### AWS Private link
+- Most secure and scalable to expose a service to 1000s of VPCs
+
+#### Site-to-Site VPN
+- Connect on-premise VPN to AWS
+- Goes over public network
+- Encrypted
+- Customer Gateway(CGW) is required on client side
+- Virtual Private Gateway (VPG) required on AWS side
+
+#### AWS Client VPN
+- Connect from any computer using OpenVPN to your private network in AWS and On-Premises
+- Goes over public network
+- Allows connecting to EC2 using private IP
+
   
-AWS Direct Connect
+### AWS Direct Connect(DX)
   - Dedicated direct connection between datacenter and VPC
   - Low latency and high throughput and security  
   - Doesnt travel over the public internet
   - setup by a local partner
+
+### AWS Transit Gateway
+- Transitive peering between thousands of VPCs and On-premises
+- Star connection
+- One single gateway
+- Simplifies complex network topology
 
 <b>AWS IAM</b>
 - Global service
@@ -166,5 +212,73 @@ AWS Direct Connect
  - Amazon Macie
  - Amazon partner solutions
 
-#### To learn
-- NAT Gateway
+### AWS Shield
+- Provides DDoS protection
+- 2 components
+  - Shield Standard (Free for all)
+  - Shield advances (Paid)
+
+### Web Application Firewall (WAF)
+- Layer 7
+- Protects web applications
+- Deploy on Application Load Balancer, API Gateway and CloudFront
+- Define WebACL
+- Protects from SQL Injection and XSS 
+- Rate based rules for DDoS protection
+
+## Encryption services
+
+### AWS Key Management Service(KMS)
+- AWS manages encryption keys for us
+
+### CloudHSM
+- AWS provisions encryption hardware
+- encryption keys to be managed by users
+- Types of Customer Master Keys
+  - Customer managed CMK
+  - AWS managed CMK
+  - AWS owned CMK
+  - CloudHSM Keys
+
+## Certificate Management
+
+### AWS Certificate Manager (ACM)
+- Manage SSL/TLS Certificates
+- Automatic TLS renewal
+
+## Secrets Management
+
+### AWS Secrets Manager
+- Store secrets
+- Secrets encrypted using KMS
+- Rotation can be automated using Lambda
+
+### AWS Artifact (Not a service)
+- Portal that provides customers with on-demand access to AWS compliance documentation and agreements
+
+### Amazon GuardDuty
+- ML based threat detection
+- Can protect against CryptoCurrency attacks
+
+### Amazon Inspector
+- Automated security assessments
+- Only for EC2 and container Infra
+- Provides report with risk score
+
+### AWS Config
+- Audit and compliance of AWS resources
+- Predefined rules available
+
+### Macie
+- Data security & Data privacy service
+- Uses ML and pattern matching to discover and protect sensitive data
+
+### Security Hub
+- Central security tools
+- Integrated dashboard
+
+### Amazon detective
+- Identify root cause of security issues
+
+### AWS abuse
+- Report suspected resources
