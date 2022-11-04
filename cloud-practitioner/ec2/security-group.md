@@ -80,18 +80,18 @@ aws ec2 describe-instance-attribute --instance-id i-0b621ff23831ac4e0 --attribut
 aws elbv2 describe-target-health --target-group-arn arn:aws:elasticloadbalancing:us-west-2:453745077389:targetgroup/target-group/a1e4cf846a25248e
 
 
-------------------------------------------------------------------------------------------------------------------------------
-|                                                    DescribeLoadBalancers                                                   |
-+----------------------------------------------------------------------------------------------------------------------------+
-||                                                       LoadBalancers                                                      ||
-|+-----------------------+--------------------------------------------------------------------------------------------------+|
-||  CanonicalHostedZoneId|  Z18D5FSROUN65G                                                                                  ||
-||  CreatedTime          |  2022-11-04T03:11:28.677Z                                                                        ||
-||  DNSName              |  lab-nlb-69a979b2fa9247d4.elb.us-west-2.amazonaws.com                                            ||
-||  IpAddressType        |  ipv4                                                                                            ||
-||  LoadBalancerArn      |  arn:aws:elasticloadbalancing:us-west-2:453745077389:loadbalancer/net/lab-nlb/69a979b2fa9247d4   ||
-||  LoadBalancerName     |  lab-nlb                                                                                         ||
-||  Scheme               |  internet-facing                                                                                 ||
-||  Type                 |  network                                                                                         ||
-||  VpcId                |  vpc-0d2e275201219c375                                                                           ||
-|+-----------------------+--------------------------------------------------------------------------------------------------+|
+------------------------------------------------------------------------------------------------------------------------------ \
+|                                                    DescribeLoadBalancers                                                   | \
++----------------------------------------------------------------------------------------------------------------------------+ \
+||                                                       LoadBalancers                                                      || \
+|+-----------------------+--------------------------------------------------------------------------------------------------+| \
+||  CanonicalHostedZoneId|  Z18D5FSROUN65G                                                                                  || \
+||  CreatedTime          |  2022-11-04T03:11:28.677Z                                                                        || \
+||  DNSName              |  lab-nlb-69a979b2fa9247d4.elb.us-west-2.amazonaws.com                                            || \
+||  IpAddressType        |  ipv4                                                                                            || \
+||  LoadBalancerArn      |  arn:aws:elasticloadbalancing:us-west-2:453745077389:loadbalancer/net/lab-nlb/69a979b2fa9247d4   || \
+||  LoadBalancerName     |  lab-nlb                                                                                         || \
+||  Scheme               |  internet-facing                                                                                 || \
+||  Type                 |  network                                                                                         || \
+||  VpcId                |  vpc-0d2e275201219c375                                                                           || \
+|+-----------------------+--------------------------------------------------------------------------------------------------+| \
