@@ -10,7 +10,10 @@ IAAS
 
 - EC2 User Data - Scripts to be executed when the machine starts
 - Naming convention - <instance type><generation>.<resource size> Ex: t2.micro
-
+- To connect to EC2
+  - Use Putty in case of Windows
+  - SSH for Linux or MacOS or Windows > 10
+  - EC2 Instance store in any case(Any OS)
 #### Types fo EC2 instances - Based on resources
 
 Each type has different classes
@@ -29,4 +32,15 @@ Each type has different classes
 - Instance features
 - Measuring instance performance
 
+#### Security Group
+- Acts as a Firewall
+- Regulates access to ports and authorized IP ranges
+- Controls access at resource level within the subnet
+- Check only entrance and not exit  
+- Stateful
+- Inbound - Doesnt allow any traffic by default
+- Outbound - Allows all traffic by default
+- Locked to a region/ VPC combination
+- Timeout while connecting to resource is mostly a SG related issue
+- Can sutorize IPs or other security groups
 
