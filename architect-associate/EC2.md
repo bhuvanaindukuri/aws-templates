@@ -1,6 +1,9 @@
 om
 IAAS
 
+### Hands-on
+Lab - https://app.pluralsight.com/labs/detail/b7809ba2-dfeb-4b0e-9f4f-6c03e2f19151/toc
+
 #### OS Supported
 - Windows
 - Linux
