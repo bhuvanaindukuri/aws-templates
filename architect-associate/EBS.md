@@ -34,9 +34,11 @@
 - GP2/ GP3 
   - General purpose SSD volume  
   - Balances price and performance 
+  - IO increases if disk size increases
 - IO1/IO2
   - Highest-performance SSD volume for mission-critical 
   - low-latency or high-throughput workloads
+  - IO can be increased independently
 - st 1
   - Low cost HDD volume
   -  designed for frequently accessed, throughput- intensive workloads
