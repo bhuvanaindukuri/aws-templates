@@ -17,6 +17,14 @@ Lab - https://app.pluralsight.com/labs/detail/b7809ba2-dfeb-4b0e-9f4f-6c03e2f191
   - Use Putty in case of Windows
   - SSH for Linux or MacOS or Windows > 10
   - EC2 Instance store in any case(Any OS)
+- Placement groups
+  - Helps in specifying how the hardware is chosen for EC2 instance creation
+  - Types
+    - Cluster -> Same hardware
+    - Spread -> Spread across
+    - Partition -> Partially spread
+  
+  
 #### Types fo EC2 instances - Based on resources
 
 Each type has different classes
