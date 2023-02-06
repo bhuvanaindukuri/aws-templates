@@ -23,6 +23,8 @@ Lab - https://app.pluralsight.com/labs/detail/b7809ba2-dfeb-4b0e-9f4f-6c03e2f191
     - Cluster -> Same hardware
     - Spread -> Spread across
     - Partition -> Partially spread
+- EC2 Hibernate -> RAM is stored in root EBS volume and loaded when started
+  - Need to enable while creating instance
   
   
 #### Types fo EC2 instances - Based on resources
@@ -96,4 +98,15 @@ Each type has different classes
    - Max 5 per account
    - Can be used for mapping
 - Preferable to use DNS ot Load balancer instead of IPs                                                                       
-                                                                  
+
+#### Elastic Network Interfaces (ENI)
+- Logical component in a VPC that represents a virtual network card
+- ENI can have the following attributes:
+  - Primary private IPv4, one or more secondary IPv4
+  - One Elastic IP (IPv4) per private IPv4
+  - One Public IPv4
+  - One or more security groups
+  - A MAC address 
+- You can create ENI independently and attach them on the fly (move them) on EC2 instances for failover
+- Bound to a specific availability zone (AZ)
+- ENI is automatically created when EC2 is created
