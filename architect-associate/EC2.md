@@ -44,3 +44,25 @@ Each type has different classes
 - Timeout while connecting to resource is mostly a SG related issue
 - Can sutorize IPs or other security groups
 
+#### EC2 Purchasing options
+- On-Demand
+- Reserved instances
+  - Reserved for 1 or 3 years
+  - 3 payment options - 1) No upfront 2) Partially upfront 3) All upfront
+  - Convertible reserved instances can change EC2 instance type, family, OS, scope and tenancy. Discount up to 66%.
+  - Up to 72% discount
+- Spot Instances
+  - Up to 90% discount
+- EC2 Savings plan 
+  - Committed to an amount of usage, long workload
+  - Locked to a specific instance type & Region
+- Dedicated host
+  - Apt for licensed tools
+  - Dedicated physical server
+- Dedicated Instances
+  - May share hardware with other instances in same account
+  - Can access underlying server/hardware
+- Capacity reservation
+  - Similar to On-demand but capacity is reserved
+  - Charged even if not used
+  - No billing discount
