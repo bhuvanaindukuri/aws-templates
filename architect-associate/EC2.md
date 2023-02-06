@@ -25,6 +25,16 @@ Lab - https://app.pluralsight.com/labs/detail/b7809ba2-dfeb-4b0e-9f4f-6c03e2f191
     - Partition -> Partially spread
 - EC2 Hibernate -> RAM is stored in root EBS volume and loaded when started
   - Need to enable while creating instance
+- AMI
+  - Per region
+  - Can be copied to other regions
+- EC2 Instance Store
+  - If you need a high-performance hardware disk, use EC2 Instance Store
+  - Better I/O performance
+  - Lose their storage if they’re stopped (ephemeral)
+  - Good for buffer / cache / scratch data / temporary content 
+  - Risk of data loss if hardware fails
+  - Backups and Replication are your responsibility
   
   
 #### Types fo EC2 instances - Based on resources
