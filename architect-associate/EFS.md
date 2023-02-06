@@ -5,6 +5,7 @@
 - Only compatible to Amazon Linux and not Windows
 - Encryption at rest using KMS
 - Scales automatically and no capacity planning
+- Data stored redundantly across AZ
 
 #### Storage classes
 - Performance Mode
