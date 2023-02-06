@@ -6,6 +6,7 @@
 - Encryption at rest using KMS
 - Scales automatically and no capacity planning
 - Data stored redundantly across AZ
+- Need to specify subnet per AZ
 
 #### Storage classes
 - Performance Mode
