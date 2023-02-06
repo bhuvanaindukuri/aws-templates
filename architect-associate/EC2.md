@@ -53,6 +53,14 @@ Each type has different classes
   - Up to 72% discount
 - Spot Instances
   - Up to 90% discount
+  - Strategies
+    - Define max spot price and continue as long as current price < max spot price
+    - Spot block for a timeframe (1-6 hours) - Deprecated feature
+    - Spot Fleet = set of spot instances + (optional) On-Demand Instances
+    - Spot fleet strategies
+       - Lowest Price
+       - Diversified
+       - Capacity optimized
 - EC2 Savings plan 
   - Committed to an amount of usage, long workload
   - Locked to a specific instance type & Region
@@ -66,3 +74,5 @@ Each type has different classes
   - Similar to On-demand but capacity is reserved
   - Charged even if not used
   - No billing discount
+
+  
