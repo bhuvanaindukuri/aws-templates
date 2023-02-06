@@ -59,7 +59,7 @@ Each type has different classes
   - Strategies
     - Define max spot price and continue as long as current price < max spot price
     - Spot block for a timeframe (1-6 hours) - Deprecated feature
-    - Spot Fleet = set of spot instances + (optional) On-Demand Instances
+    - Spot Fleet - set of spot instances + (optional) On-Demand Instances
     - Spot fleet strategies
        - Lowest Price
        - Diversified
@@ -78,4 +78,14 @@ Each type has different classes
   - Charged even if not used
   - No billing discount
 
-  
+ #### IP Address
+ - Public IP 
+   - Accessible everywhere
+   - Changes when EC2 is restarted
+- Private IP
+   - Accessible within the private network
+- Elastic IPs
+   - Max 5 per account
+   - Can be used for mapping
+- Preferable to use DNS ot Load balancer instead of IPs                                                                       
+                                                                  
