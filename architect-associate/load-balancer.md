@@ -3,6 +3,10 @@
 - Health checks
 - Elastic
 
+#### Hands-on
+- Application Load Balancer with EC2 Target group
+  - https://app.pluralsight.com/labs/detail/2179e97e-190a-45a2-b6ed-8d87a101de9f
+
 #### Types of Load balancers in AWS
 - Classic Load Balancers
   - Support HTTP, HTTPS, TCP, SSL
@@ -12,6 +16,7 @@
   - Support HTTP, HTTPS, Websocket
   - Layer 7 only
   - v2 new generation
+  - Accessed through security groups
   - Routing is possible
     - By Path
     - By hostname
