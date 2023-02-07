@@ -56,3 +56,16 @@
 - Enabled by default for ALB but can be disabled at target group level
 - Disabled by default for other load balancer types
 - For NLB & GLB, charged for inter AZ data tranfer if enabled
+
+#### Certificates
+- ALB & NLB support multiple listeners with multiple certificates
+- Both use Server Name Indication(SNI) to make it work
+
+#### Connection draining
+- Also called Deregistration delay
+- Time to complete "in-flight requests" while the instance is de-registering or unhealthy
+
+### Auto Scaling Group(ASG)
+- Set Minimum, Desired & Maximum capacity
+- Health check of LB can be passed to ASG
+- Possible to scale based on CloudWatch alarms
