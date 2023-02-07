@@ -22,9 +22,18 @@
     - By hostname
     - By query string or parameters
   - IP of the client is passed as headers X-Forwarded-For, X-Forwarded-Port and X-Forwarded-Proto 
+  - Target group can be EC2, ECS, Lambda etc
 - Network Load Balancer
   - TCP, TLS, UDP
   - v2 new generation
+  - Layer 4
+  - More performant than ALB
+  - 1 static IP per AZ or can assign Elastic IP
+  - Target groups can be EC2, Private IP, ALB, Lambda etc
+  - Health check supports TCP, HTTP or HTTPS
 - Gateway load balancer
   - Layer 3/ Network layer
   - IP Protocol
+  - Useful for inspecting all traffic Ex: Firewall, Intrusion detection & Prevention systems etc
+  - Combines Transparent network gateway & Load balancer
+  - Target group can be EC2, private IPs
