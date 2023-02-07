@@ -21,6 +21,7 @@
     - By Path
     - By hostname
     - By query string or parameters
+    - By request headers
   - IP of the client is passed as headers X-Forwarded-For, X-Forwarded-Port and X-Forwarded-Proto 
   - Target group can be EC2, ECS, Lambda etc
 - Network Load Balancer
@@ -69,3 +70,13 @@
 - Set Minimum, Desired & Maximum capacity
 - Health check of LB can be passed to ASG
 - Possible to scale based on CloudWatch alarms
+- Scaling cooldown - 5mins after a scaling event when no scaling actions are done
+
+#### ASG 
+- Dynamic Scaling
+  - Target tracking scaling Ex: Average ASG CPU to stay around 40%
+  - Simple/Step Scaling 
+    - Based on CloudWatch Alarms Ex: Add 2 when alarm triggered
+  - Scheduled Actions
+- Predictive Scaling
+                                                                       
