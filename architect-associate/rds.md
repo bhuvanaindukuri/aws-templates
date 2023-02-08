@@ -9,8 +9,8 @@
   - Aurora (AWS Proprietary database)
 
 #### Hands-on
-Create RDS DB from console: https://app.pluralsight.com/labs/detail/5750de25-3c00-495f-a030-c4347c534419
-Created RDS from Snapshot: https://app.pluralsight.com/labs/detail/2f8cbc84-bbac-40fa-9574-23c37195ac19
+- Create RDS DB from console: https://app.pluralsight.com/labs/detail/5750de25-3c00-495f-a030-c4347c534419
+- Created RDS from Snapshot: https://app.pluralsight.com/labs/detail/2f8cbc84-bbac-40fa-9574-23c37195ac19
 
 #### Features
 - Automated provisioning, OS patching
