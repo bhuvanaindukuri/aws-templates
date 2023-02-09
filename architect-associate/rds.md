@@ -75,3 +75,26 @@
 - Support for cross region replication
 - Auto scaling can be done on read replicas
 - Writer endpoint & Reader endpoint act as DNS for accessing master & read replicas respectively
+
+#### Aurora Features
+- Custom endpoints - Can be defined for specific purposes by including the instances of choice Ex: Analytics
+- Serverless - No need to provision capacity
+- Multi-Master 
+  - All instances can do writes
+  - Immediate failover for write
+- Global Aurora 
+  - Cross Region Read replicas
+    - Useful for disaster recovery
+    - Simple to put in place
+  - Global database(Recommended) 
+    - 1 Primary Region (read / write) 
+    - Up to 5 secondary (read-only) regions, replication lag is less than 1 second
+    - Up to 16 Read Replicas per secondary region
+    - Helps for decreasing latency
+    - Promoting another region (for disaster recovery) has an RTO of < 1 minute
+    - Typical cross-region replication takes less than 1 second
+- Machine-learning
+  - Enables you to add ML-based predictions to your applications via SQL
+  - Supports
+    - Amazon SageMaker - ML Models
+    - Amazon Comprehend -Sentiment Analysis   
