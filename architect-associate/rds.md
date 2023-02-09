@@ -43,6 +43,13 @@
 - Zero downtime to enable Multi-AZ
 - Meant for DR/ High availability
 
+#### RDS Proxy
+- Acts as a connection pool
+- Reduced RDS & Aurora failover time by up 66%
+- Enforce IAM Authentication for DB, and securely store credentials in AWS Secrets Manager
+- RDS Proxy is never publicly accessible (must be accessed from VPC)
+- Supports RDS(POstGre, MySql, MariaDB) and Aurora
+
 #### RDS Deployment options
 - Multi-AZ DB Cluster
   - One primary
@@ -79,6 +86,7 @@
 #### Aurora Features
 - Custom endpoints - Can be defined for specific purposes by including the instances of choice Ex: Analytics
 - Serverless - No need to provision capacity
+- Database cloning
 - Multi-Master 
   - All instances can do writes
   - Immediate failover for write
