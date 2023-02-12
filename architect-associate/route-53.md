@@ -47,3 +47,21 @@ Alias Records
 - Weighted
   - Control the % of requests going to each record
   - Can be used load balancing
+- Latency
+  - Closest to the user
+
+#### Health checks
+-Health Check => Automated DNS Failover:
+  - Health checks that monitor an endpoint (application, server, other AWS resource)
+  - Health checks that monitor other health checks (Calculated Health Checks)
+  - Health checks that monitor CloudWatch Alarms (full control !!) – e.g., throttles of DynamoDB, alarms on RDS, custom metrics, … (helpful for private resources)
+- Integrated with CW Metrics
+- About 15 global health checkers check endpoint health
+- If > 18% checks pass, it is considered healthy
+- For private hosted zone, health check can be done using cloudwatch metrics
+
+#### Calculated health checks
+- Combine results of multiple health checks
+- Or, ANd and not opeartors can be used
+- Upto 256 chilc health checks
+- Specify that of health checks that need to pass
