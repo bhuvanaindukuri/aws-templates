@@ -48,7 +48,8 @@ Create a CloudFront Distribution with an ALB Origin on AWS - https://app.plurals
   - Good fit for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP
   - Good for HTTP use cases that require static IP addresses 
   - Good for HTTP use cases that required deterministic, fast regional failover
-
+- Pricing
+  - Fixed price per accelerator + Data tranfer cost based on the region
 #### Unicast IP vs AnyCast IP
 - Unicast
   - one server holds one ip address
