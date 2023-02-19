@@ -1,0 +1,102 @@
+### AWS Snow Family
+- 2 Usecases
+  - Data Migration - Use if it takes more than 1 week to transfer data
+    - Snowcone
+      - Small and portable. Can be used in a space constrained environment
+      - Can be connected to Internet and use DataSync to send data
+      - 8TB HDD - 14TB SSD 
+      - Types
+        - Snowcone
+        - Snowcone SSD
+    - Snowball Edge
+      - Move TB or PB of data
+      - Block Storage and Object Storage support
+      - Upto 15 devices can be clustered
+      - Cannot directly transfer to Glacier. S3 load is must
+      - Types
+        - Snowball Edge Storage Optimized - 80TB of HDD Capacity
+        - Snowball Edge Compute Optimized - 42TB of HDD Capacity
+    - Snowmobile
+      - 100 PB Capacity
+  - Edge Conputing
+    - Can run EC2 or Lambda functions using AWS IoT GreenGrass
+    - Long-term deployment options 1 and 3 years
+    - Snowcone & Snowcone SSD (smaller)
+      - 2 CPUs, 4 GB of memory, wired or wireless access
+      - USB-C power using a cord or the optional battery
+    - Snowball Edge
+      - Snowball Edge – Compute Optimized
+        - 52 vCPUs, 208 GiB of RAM
+        - Optional GPU (useful for video processing or machine learning)
+        - 42 TB usable storage
+      - Snowball Edge – Storage Optimized
+        - Up to 40 vCPUs, 80 GiB of RAM
+        - Object storage clustering available
+
+
+### AWS FSx
+- Launch high-performance file systems on AWS
+- Fully Managed Service
+- Options currently available
+  - FSx for Lustre
+    - Lustre is a type of parallel distributed file system, for large-scale computing
+    - The name Lustre is derived from “Linux” and “cluster
+    - Machine Learning, <b> High Performance Computing (HPC) </b>
+    - Video Processing, Financial Modeling, Electronic Design Automation
+    - Scales up to 100s GB/s, millions of IOPS, sub-ms latencies
+    - Storage Options:
+      - SSD – low-latency, IOPS intensive workloads, small & random file operations
+      - HDD – throughput-intensive workloads, large & sequential file operations
+    - Seamless integration with S3
+      - Can “read S3” as a file system (through FSx)
+      - Can write the output of the computations back to S3 (through FSx)
+    - Can be used from on-premises servers (VPN or Direct Connect)
+    - 2 Deployment options
+      - Scratch File System
+        - Temporary storage
+        - Data not persisted
+      - Persistent File System
+        - Long-term storage
+        - Replicated with-in same AZ
+  - FSx for NetApp ONTAP
+    - Managed NetApp ONTAP on AWS
+    - File System compatible with NFS, SMB, iSCSI protocol
+    - Move workloads running on ONTAP or NAS to AWS
+    - Works with:
+      - Linux
+      - Windows
+      - MacOS 
+      - VMware Cloud on AWS
+      - Amazon Workspaces & AppStream 2.0
+      - Amazon EC2, ECS and EKS
+    - Storage shrinks or grows automatically
+    - Snapshots, replication, low-cost, compression and data de-duplication
+    - Point-in-time instantaneous cloning (helpful for testing new workloads)
+  - FSx for Windows Fileserver
+    - Fully Managed Windows File system
+    - SMB protocol & Windows NTFS
+    - Microsoft Active Directory integration, ACLs, user quotas
+    - Can be mounted on Linux EC2 instances
+    - Supports Microsoft's Distributed File System (DFS) Namespaces (group files across multiple FS)
+    - Scale up to 10s of GB/s, millions of IOPS, 100s PB of data
+    - Storage Options:
+      - SSD – latency sensitive workloads (databases, media processing, data analytics, …)
+      - HDD – broad spectrum of workloads (home directory, CMS, …)
+    - Can be accessed from your on-premises infrastructure (VPN or Direct Connect)
+    - Can be configured to be Multi-AZ (high availability)
+    - Data is backed-up daily to S3
+
+  - FSx for OpenZFS 
+    - Managed OpenZFS file system on AWS
+    - File System compatible with NFS (v3, v4, v4.1, v4.2)
+    - Move workloads running on ZFS to AWS
+    - Works with:
+      - Linux
+      - Windows
+      - MacOS 
+      - VMware Cloud on AWS
+      - Amazon Workspaces & AppStream 2.0
+      - Amazon EC2, ECS and EKS
+    - Up to 1,000,000 IOPS with < 0.5ms latency
+    - Snapshots, compression and low-cost
+    - Point-in-time instantaneous cloning
