@@ -100,3 +100,58 @@
     - Up to 1,000,000 IOPS with < 0.5ms latency
     - Snapshots, compression and low-cost
     - Point-in-time instantaneous cloning
+
+### AWS Storage Gateway
+- Bridge between on-premises data and cloud data 
+- Use cases:
+  - disaster recovery
+  - backup & restore
+  - tiered storage
+  - on-premises cache & low-latency files access
+- Types of Storage Gateway:
+  - S3 File Gateway
+    - Configured S3 bucket accessible as NFS using NFS and SMB protocol
+    - Most recently used data is cached in the file gateway
+    - Bucket access using IAM roles for each File Gateway
+    - SMB Protocol has integration with Active Directory (AD) for user authentication  
+  - FSx File Gateway
+    - Native access to Amazon FSx for Windows File Server
+    - Local cache for frequently accessed data
+    - Windows native compatibility (SMB, NTFS, Active Directory...) 
+    - Useful for group file shares and home directories
+  - Volume Gateway
+    - Block storage using iSCSI protocol backed by S3
+    - Backed by EBS snapshots which can help restore on-premises volumes!
+    - Cached volumes: low latency access to most recent data
+    - Stored volumes: entire dataset is on premise, scheduled backups to S3
+  - Tape Gateway
+    - Some companies have backup processes using physical tapes (!)
+    - With Tape Gateway, companies use the same processes but, in the cloud
+    - Virtual Tape Library (VTL) backed by Amazon S3 and Glacier
+    - Back up data using existing tape-based processes (and iSCSI interface)
+    - Works with leading backup software vendors 
+
+### AWS Transfer Family
+- A fully-managed service for file transfers into and out of Amazon S3 or Amazon EFS using the FTP protocol
+- Supported Protocols
+  - AWS Transfer for FTP (File Transfer Protocol (FTP))
+  - AWS Transfer for FTPS (File Transfer Protocol over SSL (FTPS))
+  - AWS Transfer for SFTP (Secure File Transfer Protocol (SFTP))
+- Managed infrastructure, Scalable, Reliable, Highly Available (multi-AZ)
+- Pay per provisioned endpoint per hour + data transfers in GB
+- Store and manage users’ credentials within the service
+- Integrate with existing authentication systems (Microsoft Active Directory, LDAP, Okta, Amazon Cognito, custom)
+- Usage: sharing files, public datasets, CRM, ERP, 
+
+
+### AWS DataSync
+ - Move large amount of data to and from
+    - On-premises / other cloud to AWS (NFS, SMB, HDFS, S3 API…) – needs agent
+    - AWS to AWS (different storage services) – no agent needed
+ - Can synchronize to:
+    - Amazon S3 (any storage classes – including Glacier)
+    - Amazon EFS
+    - Amazon FSx (Windows, Lustre, NetApp, OpenZFS...) 
+ - Replication tasks can be scheduled hourly, daily, weekly
+ - <b> File permissions and metadata are preserved </b> (NFS POSIX, SMB…) 
+ - One agent task can use 10 Gbps, can setup a bandwidth limit
