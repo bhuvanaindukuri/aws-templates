@@ -37,7 +37,9 @@
 #### FIFO queue
 - Maintains order
 - name has to end with .fifo
-- 
+- Can use group id to group related messages together
+- Can have one consumer per group
+- useful for dynamic grouping
 
 ### Simple Notification Service (SNS)
 - Publish Subscribe model
@@ -61,3 +63,37 @@
 
 #### Message Filtering
 - JSON based filter policy can be applied at subscriber level
+
+### Kinesis
+- Collect, Process and Analyze data in real-time
+- Types
+  - Kinesis Data Streams
+    - Retention 1 day to 365 days
+    - Ability to reprocess data
+    - Immutability - Once inserted, data cannot be deleted
+    - Data goes to shards based on partition key
+    - bandwidth for publish and subscriber is per shard and per consumer
+    - Consumer should specify the shard to read data from
+  - Kinesis Firehose - To load AWS data stores like S3
+    - Batch Writes/ Near real time
+    - Possible destinations 
+      - AWS: S3, RedShift(through S3) and Amazon Opensearch
+      - 3rd party like MongoDB
+      - Custom: Http
+    - Transformation is possible using Lambda
+    - Possible to convert record format to parquet or ORC
+    - Specify Buffer size & Buffer Interval
+  - Kinesis Data Analytics
+  - Kinesis Video Streams
+
+#### Kinesis Data Streams – Capacity Modes
+- Provisioned mode:
+  - Choose the number of shards provisioned, scale manually or using API
+  - Each shard gets 1MB/s in (or 1000 records per second)
+  - Each shard gets 2MB/s out (classic or enhanced fan-out consumer)
+  - You pay per shard provisioned per hour
+- On-demand mode:
+  - No need to provision or manage the capacity
+  - Default capacity provisioned (4 MB/s in or 4000 records per second)
+  - Scales automatically based on observed throughput peak during the last 30 days
+  - Pay per stream per hour & data in/out per GB
