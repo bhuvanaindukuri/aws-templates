@@ -50,3 +50,31 @@
   - ECS Cluster Capacity Provider
     - Capacity Provider paired with an Auto Scaling Group
     - Add EC2 Instances when there are not enough resources to create a new task
+
+
+### Elastic Kubernetes Service - EKS
+- For Multi-region, one cluster per region
+- Collect logs and metrics using CloudWatch Container Insights
+- Node Types
+  - Managed Node Groups
+    - Creates and manages Nodes (EC2 instances) for you
+    - Nodes are part of an ASG managed by EKS
+    - Supports On-Demand or Spot Instances
+  - Self-Managed Nodes
+    - Self created nodes and registered to the cluster
+    -  Managed by ASG
+    - Supports On-Demand or Spot Instances
+  - AWS Fargate 
+
+#### Amazon EKS – Data Volumes
+- Need to specify StorageClass manifest on your EKS cluster
+- Leverages a Container Storage Interface (CSI) compliant driver
+- Support for…
+  - Amazon EBS
+  - Amazon EFS (works with Fargate)
+  - Amazon FSx for Lustre
+  - Amazon FSx for NetApp ONTAP
+
+### AWS APP Runner
+- Rapid App development
+- Only docker image creation is required
