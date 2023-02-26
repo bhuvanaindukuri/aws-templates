@@ -46,3 +46,47 @@
     - Nodeja or Python
     - Can modify Viewer Request, response and origin request/response 
     - Max execution time 5-10 secs
+
+### DynamoDB
+- Made of Tables
+- Each table has primary key - Combination of primary key & sort key
+- items(Rows) Attributes(columns)
+- Max item size 400KB
+- Datatypes supported
+  - Scalar Types
+  - Document Types
+  - Set Types
+- Read/Write Capacity Mode 
+  - Provisioned Mode
+    - Capacity planning in advance
+    - Provision Read Capacity Units(RCU) & Write Capacity Units(WCU)
+    - Autoscaling is possible
+  - On-Demand Mode 
+    - Pay per use and more expensive
+
+#### DynamoDB Accelerator(DAX)
+- In-Memory Cache
+- Microseconds latency for cached data
+- Individual object cache or query cache
+
+#### DynamoDB Streams
+- Data events
+- Types
+  - DynamoDB Streams
+  - Kinesis Data streams
+
+#### Global Tables
+- Multi region with active-active replication
+- Must enable streams
+
+#### Time to Live(TTL)
+- Expire items based on TTL
+
+#### Backups for DR
+- Continuous recovery using point-in-time recovery (PITR)
+- On-Demand recovery
+
+#### S3 Integration
+- Export to S3
+  - Must enable PITR
+- Import to S3
