@@ -24,3 +24,25 @@
   - Size of uncompressed deployment (code + dependencies): 250 MB
   - Can use the /tmp directory to load other files at startup
   - Size of environment variables: 4 KB 
+- Invoke Lambda from RDS & AUrora
+  - Allows to process data events/ acts as trigger
+  - Supported for RDS for PostGreSQL and Aurora MySQL
+  - Different from RDS event notifications which are audit events (ex: user creation) 
+
+#### Lambda Network
+- Launched in AWS-owned VPC by default
+- Can be launched in VPC
+- RDS Proxy acts as connection pool for Lambda functions
+
+
+#### CloudFront Customizations
+- 2 options available
+  - CloudFront Functions
+    - Javascript functions
+    - Can be used to change viewer request and response
+    - Code entirely managed at CloudFront
+    - Max execution time <1mS
+  - Lambda@Edge
+    - Nodeja or Python
+    - Can modify Viewer Request, response and origin request/response 
+    - Max execution time 5-10 secs
