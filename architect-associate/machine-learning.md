@@ -43,7 +43,7 @@
 - Typically, difficult to do all the processes in one place + provision servers
 
 #### Forecast
-= Fully managed service that uses ML to deliver highly accurate forecasts
+- Fully managed service that uses ML to deliver highly accurate forecasts
 
 #### Kendra
 - Document Search Service
