@@ -45,3 +45,46 @@
 - EC2 instance in public subnet
 - Allows ssh to EC2 instances in private subnet
 - Allows internet access
+
+#### NAT Instance (Outdated but part of exam)
+- EC2 instance which helps in providing internet access to EC2 instance in private subnet
+- Must be in public subnet
+- Must attach Elastic IP
+- Route tables should be configured to route traffic from EC2 instances to NAT Instance
+- Modifies Source and destination IP 
+  - Hides IP of the original instance
+  - Sets the external IP as source in the response
+
+#### NAT Gateway
+- Helps in providing internet access to EC2 instance in private subnet
+- Must be in public subnet
+- Must attach Elastic IP
+- Internet Gateway is mandatory
+- Highly available and can failover to another instance in case of AZ failure
+- AWS Managed
+
+#### Security Group & NACL
+- NACL 
+  - at subnet level
+  - stateless which means both Inbound & Outbound rules are always checked
+  - Can define both allow & deny rules
+  - Rules ordered by priority and the first match wins
+  - Allows all inbound & outbound by default
+- SG is 
+  - within subnet
+  - stateful which means only one way is checked(Whichever is first)
+  - Only Allow rules
+  - All rules checked to decide
+
+#### VPC Peering
+- Privately connect two VPCs using AWS’ network
+- Make them behave as if they were in the same network
+- Must not have overlapping CIDRs 
+- VPC Peering connection is NOT transitive (must be established for each VPC that need to communicate with one another)
+- You must update route tables in each VPC’s subnets to ensure EC2 instances can communicate with each other
+- The CIDR of the other VPC should be routed to the peering connection
+- VPCs can be in different regions and different accounts
+
+#### Notes
+- Ephimeral ports are temporary ports on the client side to be able to receive the response
+
