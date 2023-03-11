@@ -146,6 +146,34 @@
   - Maximum resilience is achieved by separate connections terminating on separate devices in more than one location. - Maximum resiliency
 - Site-to-Site VPN can be used as a backup for Direct connect
 
+#### Transit Gateway
+- For having transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection
+- Regional resource, can work cross-region 
+- Share cross-account using Resource Access Manager (RAM)
+- You can peer Transit Gateways across regions
+- Route Tables: limit which VPC can talk with other VPC
+- Works with Direct Connect Gateway, VPN connections
+- Supports IP Multicast (not supported by any other AWS service
+- Transit Gateway: Site-to-Site VPN ECMP
+  - ECMP = Equal-cost multi-path routing
+  - Routing strategy to allow to forward a packet over multiple best path
+  - Use case: create multiple Site-to-Site VPN connections to increase the bandwidth of your connections to AWS
+
+#### VPC Traffic Mirroring
+- Allows you to capture and inspect network traffic in your VPC
+- Route the traffic to security appliances that you manage
+- Capture the traffic
+  - From (Source) – ENIs
+  - To (Targets) – an ENI or a Network Load Balancer
+- Capture all packets or capture the packets of your interest (optionally, truncate packets)
+- Source and Target can be in the same VPC or different VPCs (VPC Peering)
+- Use cases: content inspection, threat monitoring, troubleshooting
+
+#### Egress Only Internet Gateway
+- Acts as a NAT Gateway + Internet gateway for IPV6 Connections
+- Allows only outgoing traffic
+- Doesnt allow incoming requests to be submitted over IPV6
+
 #### Notes
 - Ephimeral ports are temporary ports on the client side to be able to receive the response
 
