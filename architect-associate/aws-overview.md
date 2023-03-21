@@ -37,5 +37,8 @@
   - Detective
   - Macie
 - Infra Protection
+  - AWS Shield
+  - WAF
+  - Firewall manager
 - Data Protection
 - Incident Reponse
