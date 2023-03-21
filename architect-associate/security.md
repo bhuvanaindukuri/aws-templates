@@ -1,7 +1,23 @@
 #### AWS WAF
 - Level 7 protection
+- Can help allow or block traffic based on 
+  - IP Address
+  - URL
+  - Path
+  - Size etc
+- Can be applied at
+  - CloudFront
+  - ALB
+  - Custom CDN
+- Can help protect from
+  - SQL Injection
+  - Cross-site scripting
 - Define set of rules and apply for resources
 - Define ACL
+- Heirarchy
+  - Condition can have many filters
+  - Rules are a combination of conditions
+  - Web ACLs have many rules
 
 #### AWS Shield
 - Protection from DDoS attack
