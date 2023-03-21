@@ -1,0 +1,157 @@
+### AWS Snow Family
+- 2 Usecases
+  - Data Migration - Use if it takes more than 1 week to transfer data
+    - Snowcone
+      - Small and portable. Can be used in a space constrained environment
+      - Can be connected to Internet and use DataSync to send data
+      - 8TB HDD - 14TB SSD 
+      - Types
+        - Snowcone
+        - Snowcone SSD
+    - Snowball Edge
+      - Move TB or PB of data
+      - Block Storage and Object Storage support
+      - Upto 15 devices can be clustered
+      - Cannot directly transfer to Glacier. S3 load is must
+      - Types
+        - Snowball Edge Storage Optimized - 80TB of HDD Capacity
+        - Snowball Edge Compute Optimized - 42TB of HDD Capacity
+    - Snowmobile
+      - 100 PB Capacity
+  - Edge Conputing
+    - Can run EC2 or Lambda functions using AWS IoT GreenGrass
+    - Long-term deployment options 1 and 3 years
+    - Snowcone & Snowcone SSD (smaller)
+      - 2 CPUs, 4 GB of memory, wired or wireless access
+      - USB-C power using a cord or the optional battery
+    - Snowball Edge
+      - Snowball Edge – Compute Optimized
+        - 52 vCPUs, 208 GiB of RAM
+        - Optional GPU (useful for video processing or machine learning)
+        - 42 TB usable storage
+      - Snowball Edge – Storage Optimized
+        - Up to 40 vCPUs, 80 GiB of RAM
+        - Object storage clustering available
+
+
+### AWS FSx
+- Launch high-performance file systems on AWS
+- Fully Managed Service
+- Options currently available
+  - FSx for Lustre
+    - Lustre is a type of parallel distributed file system, for large-scale computing
+    - The name Lustre is derived from “Linux” and “cluster
+    - Machine Learning, <b> High Performance Computing (HPC) </b>
+    - Video Processing, Financial Modeling, Electronic Design Automation
+    - Scales up to 100s GB/s, millions of IOPS, sub-ms latencies
+    - Storage Options:
+      - SSD – low-latency, IOPS intensive workloads, small & random file operations
+      - HDD – throughput-intensive workloads, large & sequential file operations
+    - Seamless integration with S3
+      - Can “read S3” as a file system (through FSx)
+      - Can write the output of the computations back to S3 (through FSx)
+    - Can be used from on-premises servers (VPN or Direct Connect)
+    - 2 Deployment options
+      - Scratch File System
+        - Temporary storage
+        - Data not persisted
+      - Persistent File System
+        - Long-term storage
+        - Replicated with-in same AZ
+  - FSx for NetApp ONTAP
+    - Managed NetApp ONTAP on AWS
+    - File System compatible with NFS, SMB, iSCSI protocol
+    - Move workloads running on ONTAP or NAS to AWS
+    - Works with:
+      - Linux
+      - Windows
+      - MacOS 
+      - VMware Cloud on AWS
+      - Amazon Workspaces & AppStream 2.0
+      - Amazon EC2, ECS and EKS
+    - Storage shrinks or grows automatically
+    - Snapshots, replication, low-cost, compression and data de-duplication
+    - Point-in-time instantaneous cloning (helpful for testing new workloads)
+  - FSx for Windows Fileserver
+    - Fully Managed Windows File system
+    - SMB protocol & Windows NTFS
+    - Microsoft Active Directory integration, ACLs, user quotas
+    - Can be mounted on Linux EC2 instances
+    - Supports Microsoft's Distributed File System (DFS) Namespaces (group files across multiple FS)
+    - Scale up to 10s of GB/s, millions of IOPS, 100s PB of data
+    - Storage Options:
+      - SSD – latency sensitive workloads (databases, media processing, data analytics, …)
+      - HDD – broad spectrum of workloads (home directory, CMS, …)
+    - Can be accessed from your on-premises infrastructure (VPN or Direct Connect)
+    - Can be configured to be Multi-AZ (high availability)
+    - Data is backed-up daily to S3
+
+  - FSx for OpenZFS 
+    - Managed OpenZFS file system on AWS
+    - File System compatible with NFS (v3, v4, v4.1, v4.2)
+    - Move workloads running on ZFS to AWS
+    - Works with:
+      - Linux
+      - Windows
+      - MacOS 
+      - VMware Cloud on AWS
+      - Amazon Workspaces & AppStream 2.0
+      - Amazon EC2, ECS and EKS
+    - Up to 1,000,000 IOPS with < 0.5ms latency
+    - Snapshots, compression and low-cost
+    - Point-in-time instantaneous cloning
+
+### AWS Storage Gateway
+- Bridge between on-premises data and cloud data 
+- Use cases:
+  - disaster recovery
+  - backup & restore
+  - tiered storage
+  - on-premises cache & low-latency files access
+- Types of Storage Gateway:
+  - S3 File Gateway
+    - Configured S3 bucket accessible as NFS using NFS and SMB protocol
+    - Most recently used data is cached in the file gateway
+    - Bucket access using IAM roles for each File Gateway
+    - SMB Protocol has integration with Active Directory (AD) for user authentication  
+  - FSx File Gateway
+    - Native access to Amazon FSx for Windows File Server
+    - Local cache for frequently accessed data
+    - Windows native compatibility (SMB, NTFS, Active Directory...) 
+    - Useful for group file shares and home directories
+  - Volume Gateway
+    - Block storage using iSCSI protocol backed by S3
+    - Backed by EBS snapshots which can help restore on-premises volumes!
+    - Cached volumes: low latency access to most recent data
+    - Stored volumes: entire dataset is on premise, scheduled backups to S3
+  - Tape Gateway
+    - Some companies have backup processes using physical tapes (!)
+    - With Tape Gateway, companies use the same processes but, in the cloud
+    - Virtual Tape Library (VTL) backed by Amazon S3 and Glacier
+    - Back up data using existing tape-based processes (and iSCSI interface)
+    - Works with leading backup software vendors 
+
+### AWS Transfer Family
+- A fully-managed service for file transfers into and out of Amazon S3 or Amazon EFS using the FTP protocol
+- Supported Protocols
+  - AWS Transfer for FTP (File Transfer Protocol (FTP))
+  - AWS Transfer for FTPS (File Transfer Protocol over SSL (FTPS))
+  - AWS Transfer for SFTP (Secure File Transfer Protocol (SFTP))
+- Managed infrastructure, Scalable, Reliable, Highly Available (multi-AZ)
+- Pay per provisioned endpoint per hour + data transfers in GB
+- Store and manage users’ credentials within the service
+- Integrate with existing authentication systems (Microsoft Active Directory, LDAP, Okta, Amazon Cognito, custom)
+- Usage: sharing files, public datasets, CRM, ERP, 
+
+
+### AWS DataSync
+ - Move large amount of data to and from
+    - On-premises / other cloud to AWS (NFS, SMB, HDFS, S3 API…) – needs agent
+    - AWS to AWS (different storage services) – no agent needed
+ - Can synchronize to:
+    - Amazon S3 (any storage classes – including Glacier)
+    - Amazon EFS
+    - Amazon FSx (Windows, Lustre, NetApp, OpenZFS...) 
+ - Replication tasks can be scheduled hourly, daily, weekly
+ - <b> File permissions and metadata are preserved </b> (NFS POSIX, SMB…) 
+ - One agent task can use 10 Gbps, can setup a bandwidth limit
