@@ -155,3 +155,7 @@
  - Replication tasks can be scheduled hourly, daily, weekly
  - <b> File permissions and metadata are preserved </b> (NFS POSIX, SMB…) 
  - One agent task can use 10 Gbps, can setup a bandwidth limit
+
+##### Common storage protocols
+- Server Message Block (SMB)
+- Network File System (NFS)
