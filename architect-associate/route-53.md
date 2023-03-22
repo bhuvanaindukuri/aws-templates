@@ -4,6 +4,8 @@
 - Possible to have health check
 - 100% availability SLA
 - Supports A/AAAA/CNAME and NS
+- Can only register 2nd level domains
+- Uses AnyCast
 
  
 
