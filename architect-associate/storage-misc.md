@@ -159,3 +159,7 @@
 ##### Common storage protocols
 - Server Message Block (SMB)
 - Network File System (NFS)
+
+#### Notes
+- CloudEndure / Application Migration Service uses EBS
+- Cloud Endure uses FSx file system for storing the OS for Disaster recovery purposes
