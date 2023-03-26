@@ -120,3 +120,16 @@ Each type has different classes
 - You can create ENI independently and attach them on the fly (move them) on EC2 instances for failover
 - Bound to a specific availability zone (AZ)
 - ENI is automatically created when EC2 is created
+
+#### Ways to connect to shell
+1. SSh access
+  - Open SSH port
+  - SSH to the instance using ssh key
+2. Instance connect
+  - Open SSH port
+  - SSH key not required
+  - Connect from console
+3. SSM Manager
+  - Dont need to open ssh port
+  - SSM Agent should run on EC2
+  - Connect using console
